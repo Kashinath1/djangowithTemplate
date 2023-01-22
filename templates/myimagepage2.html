@@ -1,0 +1,27 @@
+{% extends 'index.html' %} {% load static %}
+<title>{% block title %} image page2{% endblock %}</title>
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="row">
+      <div class="col-md-6">
+        <img
+          src="{% static 'ooo.jpg' %}"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'hhh.jpg' %}" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'aaa.jpg' %}" class="img-fluid" alt="Responsive image">
+      </div>
+    
+      <div class="col-md-6"><br>
+        <img src="{% static 'kkk.jpg' %}" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</div>

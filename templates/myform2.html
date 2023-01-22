@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+<title>{% block title %} my form2{% endblock %}</title>
+{% block content %}
+
+<div class="col-md-6" style="margin:0 auto;">
+    {% if success == True%}
+    <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top:1rem;">
+        <strong>{{successmsg}}
+        <button type="button" class="close" data-dismissible="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        
+      </div>
+      {% endif  %}
+<form method = "POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class=" btn btn-primary" style="margin:1rem auto 0 auto;display:block;">submit</button>
+</form>
+</div>
+{% endblock %}

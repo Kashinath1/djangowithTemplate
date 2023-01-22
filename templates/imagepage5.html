@@ -1,0 +1,17 @@
+{% extends 'index.html' %} {% load static %}
+<title>{% block title %} img5{% endblock %}</title>
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    {% if var %}
+    <div class="col-md-12">
+        <img src="{% static 'kkk.jpg' %}" class="img-fluid" alt="Responsive image">
+      </div>
+    {% else %}
+    <div class="col-md-12">
+        <img src="{% static 'hhh.jpg' %}" class="img-fluid" alt="Responsive image">
+      </div>
+    {% endif %}
+  </div>
+  {% endblock %}
+</div>
